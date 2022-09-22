@@ -1,0 +1,70 @@
+<!-- Header -->
+<%- include ../../components/header.ejs %>
+<!-- /.header -->
+<!-- Navbar -->
+<%- include ../../components/navbar.ejs %>
+<!-- /.navbar -->
+
+<!-- Sidebar -->
+<%- include ../../components/sidebar.ejs %>
+<!-- /.sidebar -->
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1><%= title %></h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item">
+              <a href="/nominal"><%= title %></a>
+            </li>
+            <li class="breadcrumb-item active">Edit <%= title %></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <!-- /.container-fluid -->
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">
+                <a href="/nominal" class="btn btn-primary">
+                  <i class="fas fa-list mr-2"></i> List Data
+                </a>
+              </h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body"><%- include ./_form-edit.ejs %></div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+  </section>
+  <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+
+<!-- Footer -->
+<%- include ../../components/footer.ejs %>
+<!-- /.footer -->
+<!-- ./wrapper -->
+
+<!-- Javascript -->
+<%- include ../../components/js.ejs %>
+<!-- /.javascript -->
