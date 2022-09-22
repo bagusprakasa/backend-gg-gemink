@@ -3,6 +3,9 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
+const methodOverride = require("method-override");
+const session = require("express-session");
+const flash = require("connect-flash");
 
 var categoryRouter = require("./app/category/router");
 var dashboardRouter = require("./app/dashboard/router");
@@ -13,6 +16,15 @@ var app = express();
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
+app.use(
+  session({
+    secret: "keyboard cat",
+    resave: false,
+    saveUninitialized: true,
+  })
+);
+app.use(flash());
+app.use(methodOverride("_method"));
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

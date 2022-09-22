@@ -14,9 +14,6 @@
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <div class="container-fluid">
-      <!-- Notification -->
-      <%- include ../../components/notification.ejs %>
-      <!-- /.notification -->
       <div class="row mb-2">
         <div class="col-sm-6">
           <h1><%= title %></h1>
@@ -26,7 +23,7 @@
             <li class="breadcrumb-item">
               <a href="/category"><%= title %></a>
             </li>
-            <li class="breadcrumb-item active">List <%= title %></li>
+            <li class="breadcrumb-item active">Edit <%= title %></li>
           </ol>
         </div>
       </div>
@@ -42,13 +39,13 @@
           <div class="card">
             <div class="card-header">
               <h3 class="card-title">
-                <a href="/category/create" class="btn btn-primary">
-                  <i class="fas fa-plus mr-2"></i> Add Data
+                <a href="/category" class="btn btn-primary">
+                  <i class="fas fa-list mr-2"></i> List Data
                 </a>
               </h3>
             </div>
             <!-- /.card-header -->
-            <div class="card-body"><%- include ./_table.ejs %></div>
+            <div class="card-body"><%- include ./_form-edit.ejs %></div>
             <!-- /.card-body -->
           </div>
           <!-- /.card -->
